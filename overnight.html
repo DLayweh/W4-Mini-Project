@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overnight</title>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/overnight.js"></script>
+</head>
+
+<body>
+    <script>
+        document.write(header); //variable is from main.js
+    </script>
+    <h3>price Quote</h3>
+    <form id="overnightform">
+        <label for="name" class="formlabel">Full Name</label>
+        <input type="text" id="fullname">
+        <br>
+        <br>
+        <label for="email" class="formlabel">Email Adress</label>
+        <input type="text" id="email">
+        <br>
+        <br>
+        <label for="check-in" class="formlabel">Check-In Date</label>
+        <input type="date" id="when" required>
+        <br>
+        <br>
+        <label for="numberofnights" class="formlabel">Number of Nights</label>
+        <input type="number" id="nights" min="1day" max="28days" required>
+        <br>
+        <br>
+        Please select the your room type below:
+        <br>
+        <br>
+        <input type="radio" id="queen" name="roomtype" class="roomtype" value="150">
+        <label for="queen">Queen Room</label>
+        <br>
+        <br>
+        <input type="radio" id="king" name="roomtype" class="roomtype" value="150">
+        <label for="king">King Room</label>
+        <br>
+        <br>
+        <input type="radio" id="2bedroomsuite" name="roomtype" class="roomtype" value="150" required>
+        <label for="2bedroomsuite">2-Bed Room Suite</label>
+        <br>
+        <br>
+        <label for="numberofadults">Number of Alduts</label>
+        <select name="adult" id="numberofadults" required>
+            <option value="none">Select</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <br>
+        <br>
+        <label for="numberofchildren">Number of Children</label>
+        <select name="children" id="numberofchildren" required>
+            <option value="none">Select</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <br>
+        <br>
+        Please select Discount: <br>
+
+        <input type="radio" value="none" name="discount">None <br>
+        <input type="radio" value="AAA" name="discount">AAA/Senior (10%)<br>
+        <input type="radio" value="military" name="discount">Military (20%)
+        <br>
+        <br>
+
+        <input type="submit" value="save">
+        <div id="output">?</div>
+    </form>
+    <footer>
+        Copyright 2024
+    </footer>
+</body>
+
+</html>
